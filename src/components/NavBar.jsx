@@ -1,4 +1,4 @@
-import CustomizedBadges from "./CartWidget";
+import CartWidget from "./CartWidget";
 
 const Navbar = () => {
     return (
@@ -7,7 +7,7 @@ const Navbar = () => {
                 <li className="li-style"><a href="/">Home</a></li>
                 <li className="li-style" ><a href="/about">Libros de idiomas</a></li>
                 <li className="li-style" ><a href="/about">Libros de literatura</a></li>
-                <li className="li-style" ><a href="/contact"><CustomizedBadges /></a></li>
+                <li className="li-style" ><a href="/contact"><CartWidget /></a></li>
             </ul>
         </nav>
     );

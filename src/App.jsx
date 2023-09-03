@@ -4,7 +4,7 @@ import viteLogo from '/vite.svg'
 import './App.css'
 import Navbar from './components/NavBar'
 import './components/NavBar.css'
-import Greeter from './components/ItemListContanainer'
+import ItemListContainer from './components/ItemListContanainer'
 
 
 
@@ -13,7 +13,7 @@ function App() {
   return (
     <>
       <Navbar />
-      <Greeter titulo="¡Bienvenidos a Book Storage!" parrafo="¡Descubre un mundo de conocimiento en nuestra librería online! Encuentra los mejores libros en todas las categorías imaginables y sumérgete en historias cautivadoras, aprendizaje fascinante y descubrimientos asombrosos." />
+      <ItemListContainer titulo="¡Bienvenidos a Book Storage!" parrafo="¡Descubre un mundo de conocimiento en nuestra librería online! Encuentra los mejores libros en todas las categorías imaginables y sumérgete en historias cautivadoras, aprendizaje fascinante y descubrimientos asombrosos." />
     </>
   )
 }

@@ -1,4 +1,4 @@
-function Greeter(props) {
+function ItemListContanainer(props) {
     return (
         <>
             <h1 className="titulo-intro">{props.titulo}</h1>
@@ -7,4 +7,4 @@ function Greeter(props) {
     )
 }
 
-export default Greeter 
+export default ItemListContanainer
