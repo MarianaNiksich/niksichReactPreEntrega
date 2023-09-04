@@ -1,4 +1,4 @@
-function ItemListContanainer(props) {
+function ItemListContainer(props) {
     return (
         <>
             <h1 className="titulo-intro">{props.titulo}</h1>
@@ -7,4 +7,4 @@ function ItemListContanainer(props) {
     )
 }
 
-export default ItemListContanainer
+export default ItemListContainer
