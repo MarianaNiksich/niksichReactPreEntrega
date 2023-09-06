@@ -13,8 +13,8 @@ const MainRouter = () => {
             <NavBar />
             <Routes>
                 <Route path="/" element={<Home />} />
-                <Route path="/category-literatura" element={<CategoriaLiteratura />} />
-                <Route path="/category-idiomas" elemnt={<CategoriaIdiomas />} />
+                <Route path="/category-literatura/:productId" element={<CategoriaLiteratura />} />
+                <Route path="/category-idiomas/:productId" elemnt={<CategoriaIdiomas />} />
             </Routes>
         </BrowserRouter>
     )

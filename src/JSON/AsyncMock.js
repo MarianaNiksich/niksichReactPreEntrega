@@ -1,5 +1,5 @@
 
-const productos = [
+export const productsData = [
     {
         "id": 1,
         "titulo": "Cuentos completos de Lorrie Moore",
@@ -56,15 +56,3 @@ const productos = [
     }
 ]
 
-export const getProducts = () => {
-    return new Promise((resolve) => {
-        setTimeout(() => { resolve(productos) }, 2000)
-    }
-    )
-}
-
-export const getProductsById = (productId) => {
-    return new Promise((resolve) => {
-        setTimeout(() => resolve(productos.find(products => products.id === productId)))
-    }, 2000)
-}
