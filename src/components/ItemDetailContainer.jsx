@@ -4,7 +4,7 @@ import Card from 'react-bootstrap/Card';
 import { Link } from "react-router-dom";
 
 
-function ItemListContainer({ productsData }) {
+function ItemDetailContainer({ productsData }) {
 
     return (
         <div>
@@ -29,4 +29,5 @@ function ItemListContainer({ productsData }) {
         </div>
     )
 }
-export default ItemListContainer
+
+export default ItemDetailContainer

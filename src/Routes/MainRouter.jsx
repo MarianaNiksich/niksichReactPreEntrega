@@ -1,9 +1,9 @@
 import React from "react";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import Home from "../Pages/Home";
-import CategoriaLiteratura from "../Pages/CategoriaLiteratura";
-import CategoriaIdiomas from "../Pages/CategoriaIdiomas";
+import Category from "../Pages/Category";
 import NavBar from "../components/NavBar";
+import ItemDetailContainer from "../components/ItemDetailContainer";
 
 
 
@@ -13,8 +13,8 @@ const MainRouter = () => {
             <NavBar />
             <Routes>
                 <Route path="/" element={<Home />} />
-                <Route path="/category-literatura/:productId" element={<CategoriaLiteratura />} />
-                <Route path="/category-idiomas/:productId" elemnt={<CategoriaIdiomas />} />
+                <Route path="/category/:categoryId" element={<Category />} />
+                <Route path="/item/:itemId" elemnt={<ItemDetailContainer />} />
             </Routes>
         </BrowserRouter>
     )
