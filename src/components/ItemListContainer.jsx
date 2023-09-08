@@ -2,31 +2,29 @@ import React from "react"
 import Button from 'react-bootstrap/Button';
 import Card from 'react-bootstrap/Card';
 import { Link } from "react-router-dom";
+import { getProducts } from "../JSON/AsyncMock";
+import { useState, useEffect } from "react";
+import ItemList from "../components/ItemList"
 
 
-function ItemListContainer({ productsData }) {
+function ItemListContasiner(props) {
+    const [products, setProducts] = useState([])
+
+    useEffect(() => {
+        getProducts()
+            .then(response => { setProducts(response) })
+            .catch(error => { console.error(error) })
+    })
 
     return (
-        <div>
-            {productsData.map((item) => {
-                return (
-                    <>
-
-                        <Card style={{ width: '18rem' }} key={item.id}>
-                            <Card.Img variant="top" src={item.img} />
-                            <Card.Body>
-                                <Card.Title>{item.titulo}</Card.Title>
-                                <Card.Text>
-                                    {item.autor}
-                                </Card.Text>
-                                <Button variant="primary"></Button>
-                            </Card.Body>
-                        </Card>
-                    </>
-                )
-            })
-            }
-        </div>
+        <>
+            <h1 className="titulo-intro">{props.titulo}</h1>
+            <p className="parrafo-intro">{props.parrafo}</p>
+            <div className="card-container">
+                <ItemList products={products} />
+            </div>
+        </>
     )
 }
-export default ItemListContainer
+
+export default ItemListContasiner

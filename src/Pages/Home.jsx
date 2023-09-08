@@ -1,9 +1,9 @@
 import React from "react";
 import ItemListContainer from "../components/ItemListContainer";
-import { productsData } from "../JSON/AsyncMock"
+import { productos } from "../JSON/AsyncMock"
 const Home = () => {
     return (
-        <ItemListContainer productsData={productsData} />
+        <ItemListContainer productos={productos} />
     )
 
 }
