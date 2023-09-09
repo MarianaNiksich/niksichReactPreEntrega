@@ -1,4 +1,4 @@
-export const productos = [
+export const products = [
     {
         "id": 1,
         "titulo": "Cuentos completos de Lorrie Moore",
@@ -57,13 +57,22 @@ export const productos = [
 
 export const getProducts = () => {
     return new Promise((resolve) => {
-        setTimeout(() => { resolve(productos) }, 2000)
+        setTimeout(() => { resolve(products) }, 2000)
     }
     )
 }
 
+
 export const getProductsById = (productId) => {
     return new Promise((resolve) => {
-        setTimeout(() => resolve(productos.find(products => products.id === productId)))
+        setTimeout(() => resolve(products.find(products => products.id === productId)))
+    }, 2000)
+}
+
+
+
+export const getProductsByCategory = (categoryId) => {
+    return new Promise((resolve) => {
+        setTimeout(() => resolve(products.filter(products => products.genero === categoryId)))
     }, 2000)
 }

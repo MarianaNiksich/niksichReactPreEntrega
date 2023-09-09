@@ -1,7 +1,7 @@
 import React from "react"
 import Button from 'react-bootstrap/Button';
 import Card from 'react-bootstrap/Card';
-function ItemListContainer({ products }) {
+function ItemList({ products }) {
 
     return (
         <div>
@@ -27,4 +27,4 @@ function ItemListContainer({ products }) {
         </div>
     )
 }
-export default ItemListContainer
+export default ItemList

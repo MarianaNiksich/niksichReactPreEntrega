@@ -1,20 +1,22 @@
 import React from "react"
-import Button from 'react-bootstrap/Button';
-import Card from 'react-bootstrap/Card';
+
 import { Link } from "react-router-dom";
-import { getProducts } from "../JSON/AsyncMock";
+import { getProducts, getProductsById, getProductsByCategory } from "../JSON/AsyncMock";
 import { useState, useEffect } from "react";
 import ItemList from "../components/ItemList"
+import { useParams } from "react-router-dom";
 
-
-function ItemListContasiner(props) {
+function ItemListContainer(props) {
     const [products, setProducts] = useState([])
+    const { categoryId } = useParams
+
 
     useEffect(() => {
-        getProducts()
+        const asynFunc = categoryId ? getProductsByCategory : getProducts
+        asynFunc(categoryId)
             .then(response => { setProducts(response) })
             .catch(error => { console.error(error) })
-    })
+    }, [categoryId])
 
     return (
         <>
@@ -27,4 +29,4 @@ function ItemListContasiner(props) {
     )
 }
 
-export default ItemListContasiner
+export default ItemListContainer

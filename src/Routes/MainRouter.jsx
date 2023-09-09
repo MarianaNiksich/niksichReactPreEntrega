@@ -4,6 +4,7 @@ import Home from "../Pages/Home";
 import Category from "../Pages/Category";
 import NavBar from "../components/NavBar";
 import ItemDetailContainer from "../components/ItemDetailContainer";
+import ItemListContainer from "../components/ItemList";
 
 
 
@@ -12,8 +13,8 @@ const MainRouter = () => {
         <BrowserRouter>
             <NavBar />
             <Routes>
-                <Route path="/" element={<Home />} />
-                <Route path="/category/:categoryId" element={<Category />} />
+                <Route path="/" element={<ItemListContainer />} />
+                <Route path="/category/:categoryId" element={<ItemListContainer />} />
                 <Route path="/item/:itemId" elemnt={<ItemDetailContainer />} />
             </Routes>
         </BrowserRouter>
